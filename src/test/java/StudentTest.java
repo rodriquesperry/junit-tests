@@ -42,4 +42,19 @@ public class StudentTest {
         student.addGrade(90);
         assertEquals(95, student.getGradeAverage(), 0);
     }
+
+    @Test
+    public void updateGradeTest() {
+        student.addGrade(100);
+        student.addGrade(90);
+        student.updateGrade(student.getGrades().indexOf(90), 95);
+    }
+
+    @Test
+    public void deleteGradeTest() {
+        student.addGrade(100);
+        student.addGrade(90);
+        student.addGrade(95);
+        student.deleteGrade(student.getGrades().get(1));
+    }
 }

@@ -20,13 +20,11 @@ public class Student {
     }
 
     public ArrayList<Integer> getGrades() {
-        System.out.println(this.grades);
         return this.grades;
     }
 
     public ArrayList<Integer> addGrade(int grade) {
         this.grades.add(grade);
-        System.out.println(this.grades);
         return this.grades;
 
     }
@@ -39,4 +37,13 @@ public class Student {
         return (double) sum / grades.size();
     }
 
+
+    public void updateGrade(int indexOf, int i) {
+        grades.set(indexOf, i);
+    }
+
+    public void deleteGrade(Integer integer) {
+        grades.remove(integer);
+        System.out.println(grades);
+    }
 }
